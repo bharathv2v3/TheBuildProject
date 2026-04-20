@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages & Cost Estimator | The Build Project</title>
+    <meta name="description" content="Transparent pricing and packages for your villa construction. Use our cost estimator tool.">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logos/TBP.PNG" alt="The Build Project Logo">
+            </a>
+            <button class="nav-toggle" id="navToggle">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="packages.html" class="active">Packages</a>
+                <a href="about-us.html">About Us</a>
+                <a href="#estimator" class="btn btn-primary">Cost Estimator</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section section-light" style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="container text-center" style="text-align: center;">
+            <h1 style="font-size: 3rem; margin-bottom: 20px;">Construction Packages</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">No hidden fees. Absolute transparency. Choose the package that best fits your vision and let our technology ensure perfect execution.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Essential</h3>
+                        <div class="package-price">₹2,200<span>/sq.ft</span></div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li><strong>Steel:</strong> Prime (Meenakshi/Kamdhenu)</li>
+                            <li><strong>Cement:</strong> ACC / Coromandel (43 & 53 Grade)</li>
+                            <li><strong>Masonry:</strong> Solid Concrete Blocks (6" & 4")</li>
+                            <li><strong>Flooring:</strong> Standard Vitrified Tiles (₹60/sqft)</li>
+                            <li><strong>Plumbing:</strong> Supreme CPVC/PVC, Parryware fittings</li>
+                            <li><strong>Doors:</strong> Sal Wood frames with flush doors</li>
+                            <li><strong>Electrical:</strong> Finolex wires, Anchor Roma switches</li>
+                            <li>App-based Progress Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Package 2 -->
+                <div class="package-card featured">
+                    <div class="package-badge">POPULAR</div>
+                    <div class="package-header">
+                        <h3>Premium</h3>
+                        <div class="package-price">₹2,800<span>/sq.ft</span></div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li><strong>Steel:</strong> Tata Tiscon / JSW / SAIL</li>
+                            <li><strong>Cement:</strong> Ultratech / Birla Super / Ramco</li>
+                            <li><strong>Masonry:</strong> Porotherm / Red Bricks</li>
+                            <li><strong>Flooring:</strong> Premium Vitrified/Granite (₹120/sqft)</li>
+                            <li><strong>Plumbing:</strong> Ashirvad pipes, Jaquar/Hindware fixtures</li>
+                            <li><strong>Doors:</strong> Teak Wood main door & frames</li>
+                            <li><strong>Electrical:</strong> Havells wires, Legrand switches</li>
+                            <li>Smart Home Integration Prep</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <div class="package-header" style="background: var(--dark);">
+                        <h3>Ultra Luxury</h3>
+                        <div class="package-price">₹3,200<span>/sq.ft</span></div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li><strong>Steel:</strong> Tata Tiscon Fe550D / Vizag</li>
+                            <li><strong>Cement:</strong> Ultratech Premium / ACC Gold</li>
+                            <li><strong>Flooring:</strong> Imported Italian Marble (₹250+/sqft)</li>
+                            <li><strong>Plumbing:</strong> Grohe / Kohler Luxury Fixtures</li>
+                            <li><strong>Doors:</strong> Solid Teak Wood doors throughout</li>
+                            <li><strong>Electrical:</strong> Schneider/Panasonic Smart Switches</li>
+                            <li><strong>Smart Home:</strong> Fully Automated Lighting & Security</li>
+                            <li>Dedicated On-site Project Manager</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estimator" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Cost Estimator</h2>
+            <div class="estimator-container">
+                <form id="estimatorForm" class="estimator-form">
+                    <div class="form-group full-width">
+                        <label for="package">Select Package</label>
+                        <select id="package" class="form-control" required>
+                            <option value="essential">Essential (₹2,200/sq.ft)</option>
+                            <option value="premium" selected>Premium (₹2,800/sq.ft)</option>
+                            <option value="luxury">Ultra Luxury (₹3,200/sq.ft)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Built-up Area (Sq.Ft)</label>
+                        <input type="number" id="area" class="form-control" placeholder="e.g. 2500" required min="500">
+                    </div>
+                    <div class="form-group">
+                        <label for="floors">Number of Floors</label>
+                        <input type="number" id="floors" class="form-control" value="1" min="1" required>
+                    </div>
+                    <div class="form-group full-width" style="text-align: center; margin-top: 10px;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 15px;">Calculate Estimate</button>
+                    </div>
+                </form>
+                
+                <div id="estimatorResult" class="estimator-result">
+                    <h3>Estimated Construction Cost</h3>
+                    <div class="total-cost" id="totalCost">₹0</div>
+                    <p style="margin-top: 10px; color: var(--dark); font-size: 0.9rem;">*This is a preliminary estimate. Final cost will be provided after detailed design and plot survey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/logos/TBP.PNG" alt="Logo" style="height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                    <p>India's leading tech-enabled construction company specializing in premium and luxury villas.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="packages.html">Packages & Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>📞 +91 123 456 7890</li>
+                        <li>✉️ info@thebuildproject.com</li>
+                        <li>📍 123 Luxury Estate Rd, Bangalore</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 The Build Project. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
