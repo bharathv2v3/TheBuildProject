@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar navbar-transparent">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <a href="index.html" class="nav-logo">
                 <img src="assets/logos/TBP.PNG" alt="The Build Project Logo">
@@ -25,10 +25,7 @@
     </nav>
 
     <section class="hero">
-        <video class="hero-video" autoplay loop muted playsinline>
-            <source src="https://videos.pexels.com/video-files/3206973/3206973-uhd_2560_1440_25fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="hero-bg-anim"></div>
         <div class="container">
             <div class="hero-content">
                 <h1>Precision Engineering Meets Ultra-Luxury Living</h1>
@@ -41,19 +38,37 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="twin-section">
+        <div class="container" style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+            <div class="twin-content" style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--white); font-family: var(--font-heading);">Real-Time Digital Twin Publishing</h2>
+                <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px;">Experience the future of construction tracking. We publish the progress of your luxury villa live via cutting-edge <strong>Digital Twin Technology</strong>.</p>
+                <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px;">Instead of basic site photos, you receive a precise, 1:1 interactive 3D virtual model of your ongoing construction. Updated continuously using on-site LiDAR scans, this guarantees absolute transparency down to the millimeter.</p>
+                <a href="how-it-works.html" class="btn btn-primary">See Our Process</a>
+            </div>
+            <div class="twin-image" style="flex: 1; min-width: 300px;">
+                <img src="assets/images/digital_twin.png" alt="Digital Twin Technology" style="width: 100%; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 2px solid var(--accent);">
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light">
         <div class="container">
-            <h2 class="section-title">Why Choose Us?</h2>
+            <h2 class="section-title">High-Precision Construction</h2>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏗️</div>
-                    <h3>Tech-Enabled Tracking</h3>
-                    <p>Track your villa's construction progress in real-time through our dedicated client app.</p>
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="assets/images/precision_lidar.png" alt="LiDAR 3D Scanning" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                    <div style="padding: 30px;">
+                        <h3>LiDAR 3D Scanning</h3>
+                        <p>We use advanced 3D laser scanners to create millimeter-perfect topological maps and structural models.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Absolute Transparency</h3>
-                    <p>Clear quotations, no hidden costs, and ESCROW-secured payments.</p>
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="assets/images/precision_drone.png" alt="Drone Surveying" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                    <div style="padding: 30px;">
+                        <h3>Drone Topography</h3>
+                        <p>Aerial drone mapping ensures flawless site planning, land grading, and real-time structural audits.</p>
+                    </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">✅</div>
