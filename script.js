@@ -72,3 +72,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Quote Request Logic
+const sendQuoteBtn = document.getElementById('sendQuoteBtn');
+if (sendQuoteBtn) {
+    sendQuoteBtn.addEventListener('click', () => {
+        const name = document.getElementById('quoteName').value.trim();
+        const phone = document.getElementById('quotePhone').value.trim();
+        const details = document.getElementById('quoteDetails').value.trim();
+        
+        if (!name || !phone) {
+            alert('Please enter your name and phone number.');
+            return;
+        }
+
+        const area = document.getElementById('area').value;
+        const packageSelect = document.getElementById('package');
+        const packageType = packageSelect.options[packageSelect.selectedIndex].text;
+        const floors = document.getElementById('floors').value;
+        const totalEstimate = document.getElementById('totalCost').innerText;
+
+        const subject = encodeURIComponent(`Detailed Quote Request - ${name}`);
+        const body = encodeURIComponent(`Hello The Build Project Team,
+
+I would like to request a detailed quote for my construction project.
+
+Here are my preliminary estimate details:
+- Package: ${packageType}
+- Built-up Area: ${area} sq.ft
+- Floors: ${floors}
+- Preliminary Estimated Cost: ${totalEstimate}
+
+My Contact Details:
+- Name: ${name}
+- Phone: ${phone}
+
+Additional Details:
+${details || 'None provided'}
+
+Please get in touch with me to discuss further.
+
+Thank you.`);
+
+        window.location.href = `mailto:info@thebuildproject.com?subject=${subject}&body=${body}`;
+    });
+}
